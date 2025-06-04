@@ -1,0 +1,12 @@
+# main requirements
+metaflow==2.15.7
+
+# dev requirements
+flake8==7.1.1
+pylint==3.3.3
+mypy==1.13.0
+black==24.10.0
+pydoclint==0.6.0
+pyenchant==3.2.2
+semgrep==1.103.0
+pytest==8.3.4
