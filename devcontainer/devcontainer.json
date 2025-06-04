@@ -1,0 +1,46 @@
+{
+	"name": "MLOps Learning",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"enableNonRootDocker": "true",
+			"moby": "true"
+		},
+		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+			"version": "latest",
+			"helm": "latest",
+			"minikube": "latest"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"black-formatter.args": [
+					"--preview",
+					"--line-length",
+					"79"
+				],
+				"[python]": {
+					"editor.rulers": [
+						{
+							"column": 79
+						}
+					],
+					"editor.defaultFormatter": "ms-python.black-formatter",
+					"editor.formatOnSave": true
+				}
+			},
+			"extensions": [
+				"ms-python.black-formatter",
+				"ms-python.vscode-pylance",
+				"ms-python.python",
+				"GitHub.copilot-chat",
+				"GitHub.copilot"
+			]
+		}
+	},
+	"forwardPorts": [10350, 9001, 9000, 8083, 8080, 3000, 5432, 2746]
+}
